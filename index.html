@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Review Page</title>
+    <style>
+        #main-product-img{
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+            margin: 20px auto;
+            display: block;
+        }
+        .product-img-container{
+            display: flex;
+            justify-content: center;
+        }
+        .product-img{
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px 5px;
+            cursor: pointer;
+
+        }
+    </style>
 </head>
 <body>
-    
+    <img src="front.jpg" id="main-product-img">
+
+    <div class="product-img-container">
+        <img src="front.jpg" class="product-img" onclick="changeImage('front.jpg')"/>
+        <img src="side.jpg" class="product-img" onclick="changeImage('side.jpg')"/>
+        <img src="one.jpg" class="product-img" onclick="changeImage('one.jpg')"/>
+        <img src="two.jpg" class="product-img" onclick="changeImage('two.jpg')"/>
+        <img src="three.jpg" class="product-img" onclick="changeImage('three.jpg')"/>
+    </div>
+
+    <script>
+        function changeImage(imageName){
+           const mainImage = document.getElementById('main-product-img');
+
+           mainImage.src = imageName ;
+        }
+    </script>
 </body>
 </html>
